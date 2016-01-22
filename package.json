@@ -1,0 +1,28 @@
+{
+  "name": "realizehit-client-api",
+  "version": "0.0.0",
+  "description": "realizehit api client",
+  "main": "src/client.js",
+  "scripts": {
+    "test-jshint": "jshint .",
+    "test-mocha": "mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter spec $(find test/* -name '*.test.js')",
+    "test": "for kind in jshint mocha; do npm run test-$kind; [ $? -ne 0 ] && exit 1; done; exit 0",
+    "preversion": "npm test",
+    "postversion": "git push origin master && git push origin --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realizehit/client-api.js.git"
+  },
+  "keywords": [
+    "realizehit",
+    "api",
+    "client"
+  ],
+  "author": "José Moreira <jose.moreira@microdual.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/realizehit/client-api.js/issues"
+  },
+  "homepage": "https://github.com/realizehit/client-api.js#readme"
+}
