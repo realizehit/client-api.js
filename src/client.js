@@ -19,6 +19,7 @@ function APIClient ( options ) {
         throw new Error( "You must define API Server endpoint" )
     }
 
+    // Parse uri
     this.uri = URI.parse( options.uri )
 
 }
