@@ -48,16 +48,9 @@ Not developed, just an idea, want to develop it?
 
 ## Contributing
 
-### Running with node
-
 ```bash
+git clone https://github.com/realizehit/client-api.js.git
+cd client-api.js
 npm install
-npm start
-```
-
-### Running with docker
-
-```bash
-docker build -t realizehit/client-api:dev .
-docker run -d -p 8080:8080 realizehit/client-api:dev
+npm test
 ```
